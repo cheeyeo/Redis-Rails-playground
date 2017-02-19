@@ -1,0 +1,18 @@
+<%= form_for(user) do |f| %>
+  <%= render 'shared/errors', object: user %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <%= f.text_area :email %>
+  </div>
+  <div class="form-group">
+    <%= f.label :phone %>
+    <%= f.text_area :phone %>
+  </div>
+
+  <%= f.submit %>
+<% end %>

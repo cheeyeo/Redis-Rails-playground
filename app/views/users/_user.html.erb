@@ -1,0 +1,12 @@
+<% cache user do %>
+  <div id="user-<%= user.id%>" class="user">
+    <p>Name: <%=h link_to user.name, user_path(user) %></p>
+    <p>Email: <%=h link_to user.email, "mailto:#{user.email}" %></p>
+    <h4>Additional Info:</h4>
+    <p>Phone: <%=h user.phone %></p>
+    <p>
+      <%=h link_to 'Edit User', edit_user_path(user) %>
+      <%=h link_to 'Delete User?', user_path(user), method: :delete, data: { confirm: "Are you sure?" } %>
+    </p>
+  </div>
+<% end %>

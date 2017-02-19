@@ -1,0 +1,4 @@
+<h1>User - <%= @user.name %></h1>
+<%= render @user %>
+<p>Visits: <%=h @user.cached_visits %></p>
+<p><%= link_to 'List of users', users_path %></p>
