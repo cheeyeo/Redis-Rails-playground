@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user.cached_track_vists
+    @user.track_vists
   end
 
   def edit

@@ -15,6 +15,14 @@ class User < ActiveRecord::Base
     Rails.cache.delete("users:#{self.id}")
   end
 
+  def tracker
+    @tracker ||= Tracker.new
+  end
+
+  def track_visits
+    tracker.add_hit(self.id)
+  end
+
   def cached_track_vists
     Rails.cache.increment("users:#{self.id}:visits", 1)
   end

@@ -15,8 +15,6 @@ The current implementation of redis are:
 
 ## TODOS
 
-* Improve on the user tracking analytics
-
 * Implement user's followers / followees
 
 * Some kind of pub/sub system
